@@ -15,7 +15,7 @@
     <div class="container">
 
         <main>
-            <div id="login" class="vertical-align d-none">
+            <div id="login" class="vertical-align">
                 <div class="row">
                     <div class="col-md-6 iphoneImage">
                         <img src="images/iphone.webp" alt="">
@@ -37,7 +37,8 @@
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
                                 <label class="form-check-label" for="rememberMe">Recuérdame</label>
                             </div>
-                            <button type="submit" class="btn btn-block btn-primary">Iniciar sesion</button>
+                            <button type="submit" class="btn btn-block btn-primary" id="loginButton">Iniciar
+                                sesion</button>
                         </form>
                         <div class="row">
                             Olvidaste
@@ -60,7 +61,7 @@
                 </div>
             </div>
 
-            <div id="todoList">
+            <div id="todoList" style="display: none;">
                 <div class="row mt-5">
                     <div class="col-8">
                         <div class="row mb-5">
@@ -139,6 +140,7 @@
                         <div class="row">
                             Calendario
                         </div>
+                        <button class="btn btn-block btn-secondary" id="logoutButton">Cerrar sesion</button>
 
                     </div>
                 </div>
