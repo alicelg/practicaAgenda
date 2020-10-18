@@ -16,3 +16,8 @@
 #login .iphoneImage img {
     width: 100%;
 }
+
+#todoList .profileImage img {
+    height: 200px;
+    margin: 0 auto;
+}
