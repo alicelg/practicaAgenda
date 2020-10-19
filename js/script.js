@@ -8,13 +8,13 @@ logoutButton.addEventListener('click', logout)
 
 
 function login() {
-    document.querySelector('#login').style.display = 'none',
-        document.querySelector('#todoList').style.display = 'block';
+    document.querySelector('#login').style.display = 'none';
+    document.querySelector('#todoList').style.display = 'block';
 }
 
 function logout() {
-    document.querySelector('#login').style.display = 'flex',
-        document.querySelector('#todoList').style.display = 'none';
+    document.querySelector('#login').style.display = 'flex';
+    document.querySelector('#todoList').style.display = 'none';
 }
 
 const prueba = [{
