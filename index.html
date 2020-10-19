@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda2020</title>
+    <title>to do's</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -21,8 +21,12 @@
                         <img src="images/iphone.webp" alt="">
                     </div>
                     <div class="col-md-4">
-                        <div class="row">
-                            Titulo
+                        <div class="row-2">
+                            <div class="col-12">
+                                <div class="logo">
+                                    <img src="images/logo.png" alt="">
+                                </div>
+                            </div>
                         </div>
                         <form>
                             <div class="form-group">
@@ -35,121 +39,132 @@
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
-                                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+                                <label class="form-check-label text-secondary" for="rememberMe">Recuérdame</label>
                             </div>
                             <button type="submit" class="btn btn-block btn-primary" id="loginButton">Iniciar
                                 sesion</button>
                         </form>
-                        <div class="row">
-                            Olvidaste
-                        </div>
-                        <div class="row">
-                            Registrate
-                        </div>
 
                         <div class="row">
-                            <div class="col-12"> Descargar app
-                            </div>
-                            <div class="col-6">
-                                imagen
-                            </div>
-                            <div class="col-6">
-                                imagen
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="todoList" style="display: none;">
-                <div class="row mt-5">
-                    <div class="col-8">
-                        <div class="row mb-5">
-                            <div class="col-12 mx-auto">
-                                Agenda2020
-                            </div>
-                        </div>
-                        <div class="row mb-5">
-                            <form class="w-100">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="task">Tarea</label>
-                                    </div>
-                                    <input type="text" class="form-control" id="task">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="priority">Prioridad</label>
-                                    </div>
-                                    <select class="custom-select" id="priority">
-                                        <option selected>Elige</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="btn btn-block btn-primary">Añadir</button>
-                            </form>
-                        </div>
-
-                        <hr class="border-secondary mb-5">
-                        <div class="row mb-5">
                             <div class="col-12">
-                                <form>
-                                    <div class="form-row justify-content-center">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCity">City</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </form>
+                                <p class="text-primary text-center mt-2"> ¿Olvidaste tu contraseña?</p>
                             </div>
 
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center mb-4 border"> ¿No tienes cuenta? <span class="text-primary">
+                                    Regístrate</span>
+                            </div>
 
                         </div>
 
                         <div class="row">
-                            <div class="col-10">
-                                <p>titulo tarea</p>
+                            <div class="col-12">
+                                <p class="text-center text-secondary"> Descargar app</p>
                             </div>
-                            <!-- <div class="col-2">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12 mt-2 ">
+                                <div class="down">
+                                    <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/google-play-and-apple-app-store-logos-22.png"
+                                        alt="descargar la app">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segunda visualización -->
+
+                        <div id="todoList" style="display: none;">
+                            <div class="row mt-5">
+                                <div class="col-8">
+                                    <div class="row mb-5">
+                                        <div class="col-12 mx-auto">
+                                            to do's
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <form class="w-100">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="task">Tarea</label>
+                                                </div>
+                                                <input type="text" class="form-control" id="task">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="priority">Prioridad</label>
+                                                </div>
+                                                <select class="custom-select" id="priority">
+                                                    <option selected>Elige</option>
+                                                    <option value="1">Urgente</option>
+                                                    <option value="2">Mensual</option>
+                                                    <option value="3">Diaria</option>
+                                                </select>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-block btn-primary">Añadir</button>
+                                        </form>
+                                    </div>
+
+                                    <hr class="border-secondary mb-5">
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="form-row justify-content-center">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputCity">City</label>
+                                                        <input type="text" class="form-control" id="inputCity">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="inputState">State</label>
+                                                        <select id="inputState" class="form-control">
+                                                            <option selected>Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>titulo tarea</p>
+                                        </div>
+                                        <!-- <div class="col-2">
                         </div> -->
-                            <div class="col-2">
-                                <div class="btn btn-danger">Eliminar</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="row profileImage">
-                            <img src="images/icono.png" alt="">
-                            <div class="col-12">
-                                <h3 class="text-center">Bienvenido Juan</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            Leyenda
-                        </div>
-                        <div class="row">
-                            Calendario
-                        </div>
-                        <button class="btn btn-block btn-secondary" id="logoutButton">Cerrar sesion</button>
+                                        <div class="col-2">
+                                            <div class="btn btn-danger">Eliminar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row profileImage">
+                                        <img src="images/icono.png" alt="">
+                                        <div class="col-12">
+                                            <h3 class="text-center">Bienvenido Juan</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        Leyenda
+                                    </div>
+                                    <div class="row">
+                                        Calendario
+                                    </div>
+                                    <button class="btn btn-block btn-secondary" id="logoutButton">Cerrar sesion</button>
 
-                    </div>
-                </div>
-            </div>
+                                </div>
+                            </div>
+                        </div>
 
 
         </main>
         <footer>
-            <p>Agendas Personalizadas &copy; 2020</p>
+            <p>to do's &copy; 2020</p>
         </footer>
     </div>
 

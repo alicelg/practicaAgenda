@@ -17,7 +17,16 @@
     width: 100%;
 }
 
+#login .down img {
+    width: 100%;
+    height: auto;
+}
+
 #todoList .profileImage img {
     height: 200px;
     margin: 0 auto;
+}
+
+#login .logo img {
+    width: 100%;
 }

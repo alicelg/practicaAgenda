@@ -23,6 +23,6 @@ const prueba = [{
     prioridad: 'urgente'
 }]
 
-function printList(pLista) {
+/* function printList(pLista) {
 
-}
+} */
