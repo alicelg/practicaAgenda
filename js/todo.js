@@ -3,16 +3,16 @@ export let initTasks = new Array(
     {
         idTarea: 0,
         tarea: "Estudiar JS",
-        prioridad: "Urgente"
+        prioridad: "urgente"
     },
     {
         idTarea: 1,
         tarea: "Hacer máster online",
-        prioridad: "Diario"
+        prioridad: "diario"
     },
     {
         idTarea: 2,
         tarea: "Cuidar el Jardin",
-        prioridad: "Mensual"
+        prioridad: "mensual"
     },
 )
