@@ -32,3 +32,27 @@
     height: 100px;
 }
 
+/* Visualizacion de la prioridad en colores */
+
+
+
+.urgente{
+    background-color: rgb(248, 69, 69);
+    border-radius: 3px;
+    color: white;
+}
+
+.diario{
+    background-color: rgb(110, 110, 250);
+    border-radius: 3px;
+    color: white;
+}
+
+.mensual{
+    background-color: teal;
+    border-radius: 3px;
+    color: white;
+}
+
+
+
