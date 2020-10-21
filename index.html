@@ -99,41 +99,41 @@
                                         <label class="input-group-text" for="priority">Prioridad</label>
                                     </div>
                                     <select class="custom-select" id="priority">
-                                        <option selected>Elige</option>
-                                        <option value="1">Urgente</option>
-                                        <option value="2">Mensual</option>
-                                        <option value="3">Diaria</option>
+                                        <option value="elige" selected>Elige</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diaria">Diaria</option>
+                                        <option value="mensual">Mensual</option>
                                     </select>
                                 </div>
-                                <div type="submit" class="btn btn-block btn-primary">Añadir</div>
+                                <div class="btn btn-block btn-primary" id="addTaskButton"">Añadir</div>
                             </form>
                         </div>
 
-                        <hr class="border-secondary mb-5">
-                        <div class="row mb-5">
-                            <div class="col-12">
-                                <form>
-                                    <div class="form-row justify-content-center">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputSearch">Buscar</label>
-                                            <input type="text" class="form-control" id="inputSearch">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputFilter">Filtrar</label>
-                                            <select id="inputFilter" class="form-control">
-                                                <option selected>Elegir</option>
-                                                <option value="urgente">Urgente</option>
-                                                <option value="mensual"> Mensual</option>
-                                                <option value="diario">Diario</option>
-                                            </select>
+                        <hr class=" border-secondary mb-5">
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="form-row justify-content-center">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputSearch">Buscar</label>
+                                                        <input type="text" class="form-control" id="inputSearch">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="inputFilter">Filtrar</label>
+                                                        <select id="inputFilter" class="form-control">
+                                                            <option selected>Elegir</option>
+                                                            <option value="urgente">Urgente</option>
+                                                            <option value="mensual"> Mensual</option>
+                                                            <option value="diario">Diario</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
 
-                        <div id="taskList" class="mb-5">
-                            <!--  <div class="row">
+                                    <div id="taskList" class="mb-5">
+                                        <!--  <div class="row">
                                 <div class="col-10">
                                     <p>titulo tarea</p>
                                 </div>
@@ -142,27 +142,27 @@
                                 </div>
                             </div> -->
 
-                        </div>
+                                    </div>
 
-                    </div>
-                    <div class="col-4">
-                        <div class="row profileImage">
-                            <img src="images/icono.png" alt="">
-                            <div class="col-12">
-                                <h3 id="name_user" class="text-center">Bienvenido</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            Leyenda
-                        </div>
-                        <div class="row">
-                            Calendario
-                        </div>
-                        <div class="btn btn-block btn-secondary" id="logoutButton">Cerrar sesion</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row profileImage">
+                                        <img src="images/icono.png" alt="">
+                                        <div class="col-12">
+                                            <h3 id="name_user" class="text-center">Bienvenido</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        Leyenda
+                                    </div>
+                                    <div class="row">
+                                        Calendario
+                                    </div>
+                                    <div class="btn btn-block btn-secondary" id="logoutButton">Cerrar sesion</div>
 
+                                </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
 
         </main>
@@ -170,7 +170,7 @@
     </div>
 
 
-    <footer class="row bg-secondary p-2">
+    <footer class="row bg-secondary p-2 fixed-bottom ">
         <div class="container">
             <p class="mt-2 text-light">to do's &copy; 2020</p>
         </div>

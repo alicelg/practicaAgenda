@@ -27,18 +27,20 @@ function logout() {
 
 printTask(taskArray)
 function printTask(pTasks) {
-    taskListDiv.innerHTML = ""
+    taskListDiv.innerHTML = "";
     for (let task of pTasks) {
         taskListDiv.innerHTML += `
-            <div class="row ${task.prioridad}">
-                <div class="col-10">
-                    <p>${task.tarea}</p>
+            <div class="row ${task.prioridad} mb-2 ">
+                <div class="col-10 d-flex align-items-center">
+                    <p class="mb-0">${task.tarea}</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 px-0 d-flex justify-content-end">
                     <div class="btn btn-danger deleteButton">Eliminar</div>
                 </div>
             </div>
             `
+
+
     }
 
     /* Se pone aquí porque hasta que no se cree, no lo puede capturar */
@@ -55,7 +57,7 @@ function addTask() {
     console.log(taskInput.value);
     console.log(priorityInput.value);
     if (taskInput.value.trim().length == 0 || priorityInput.value == "elige") {
-        alert('por favor mete todos los dattos')
+        alert('por favor mete todos los datos');
     } else {
         const createTask = {
             idTarea: 0,
