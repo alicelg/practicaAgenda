@@ -27,7 +27,8 @@
     margin: 0 auto;
 }
 
-#login .logo img {
+.logo img {
     width: 80%;
     height: 100px;
 }
+
