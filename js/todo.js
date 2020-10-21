@@ -1,4 +1,5 @@
-const todo = new Array(
+
+export let initTasks = new Array(
     {
         idTarea: 0,
         tarea: "Estudiar JS",
@@ -14,5 +15,4 @@ const todo = new Array(
         tarea: "Cuidar el Jardin",
         prioridad: "Mensual"
     },
-
 )
