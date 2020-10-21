@@ -26,9 +26,33 @@ function printTask(pTasks) {
                     <p>${task.tarea}</p>
                 </div>
                 <div class="col-2">
-                    <div class="btn btn-danger">Eliminar</div>
+                    <div class="btn btn-danger deleteButton">Eliminar</div>
                 </div>
             </div>
             `
     }
+
+    const deleteButtons = document.querySelectorAll('.deleteButton')
+
+    deleteButtons.forEach(deleteButton => {
+        deleteButton.addEventListener('click', deleteTask)
+    })
+}
+
+function name(params) {
+
+}
+
+function addTask(pNewTask) {
+
+
+}
+
+function deleteTask(event) {
+    /*  console.log(event.target)
+     console.log(event.target.parentNode.parentNode) */
+    const deleteRow = event.target.parentNode.parentNode
+
+    deleteRow.parentNode.removeChild(deleteRow)
+
 }
