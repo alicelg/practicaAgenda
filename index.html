@@ -2,73 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>to do's</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-
-    <div class="container">
-
+    <div class="container marginBottomContainer">
         <main>
-            <div id="login" class="vertical-align" style="display: none;">
+            <div id="login" class="vertical-align">
                 <div class="row">
                     <div class="col-md-6 iphoneImage">
-                        <img src="images/iphone.webp" alt="">
+                        <img src="images/iphone.webp" alt="" />
                     </div>
                     <div class="col-md-4">
                         <div class="row-2">
                             <div class="col-12">
                                 <div class="logo mx-auto">
-                                    <img src="images/logo.png" alt="">
+                                    <h2>To do's</h2>
                                 </div>
                             </div>
                         </div>
                         <form>
                             <div class="form-group">
                                 <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="form_name">
+                                <input type="text" class="form-control" id="name" />
                             </div>
                             <div class="form-group">
                                 <label for="password">Contraseña</label>
-                                <input type="pasword" class="form-control" id="paswword">
+                                <input type="pasword" class="form-control" id="password" />
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <input type="checkbox" class="form-check-input" id="rememberMe" />
                                 <label class="form-check-label text-secondary" for="rememberMe">Recuérdame</label>
                             </div>
-                            <div type="submit" class="btn btn-block btn-primary" id="loginButton">Iniciar
-                                sesion</div>
+                            <div type="submit" class="btn btn-block btn-primary" id="loginButton">
+                                Iniciar sesión
+                            </div>
                         </form>
 
                         <div class="row">
+                            <div class="col-12 alertBtn">
+                                <p class="text-primary text-center mt-2">
+                                    ¿Olvidaste tu contraseña?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center mb-4 border alertBtn">
+                                ¿No tienes cuenta?
+                                <span class="text-primary"> Regístrate</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-12">
-                                <p class="text-primary text-center mt-2"> ¿Olvidaste tu contraseña?</p>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-12 text-center mb-4 border"> ¿No tienes cuenta? <span class="text-primary">
-                                    Regístrate</span>
+                                <p class="text-center text-secondary">Descargar app</p>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-12">
-                                <p class="text-center text-secondary"> Descargar app</p>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-12 mt-2 ">
+                            <div class="col-12 mt-2">
                                 <div class="down">
                                     <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/google-play-and-apple-app-store-logos-22.png"
-                                        alt="descargar la app">
+                                        alt="descargar la app" />
                                 </div>
                             </div>
                         </div>
@@ -77,16 +78,15 @@
             </div>
 
             <!-- Segunda visualización -->
-
-            <div id="todoList">
+            <div id="todoList" style="display: none;">
                 <div class="row mt-5">
                     <div class="col-8">
-                        <div class="row mb-5">
-                            <div class="logo col-10 mx-auto">
-                                <img src="images/logo.png" alt="">
+                        <div class="row mb-1">
+                            <div class="logo col-12 mx-auto">
+                                <h2>To do's</h2>
                             </div>
                         </div>
-                        <div class="row mb-5">
+                        <div class="row mb-3">
                             <form class="w-100">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -101,39 +101,40 @@
                                     <select class="custom-select" id="priority">
                                         <option value="elige" selected>Elige</option>
                                         <option value="urgente">Urgente</option>
-                                        <option value="diaria">Diaria</option>
+                                        <option value="diario">Diario</option>
                                         <option value="mensual">Mensual</option>
                                     </select>
                                 </div>
-                                <div class="btn btn-block btn-primary" id="addTaskButton"">Añadir</div>
+                                <div class="btn btn-block btn-primary" id="addTaskButton">
+                                    Añadir
+                                </div>
                             </form>
                         </div>
 
-                        <hr class=" border-secondary mb-5">
-                                    <div class="row mb-5">
-                                        <div class="col-12">
-                                            <form>
-                                                <div class="form-row justify-content-center">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="search">Buscar</label>
-                                                        <input type="text" class="form-control" id="inputSearch">
-                                                    </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputFilter">Filtrar</label>
-                                                        <select id="inputFilter" class="form-control">
-                                                            <option selected>Elegir</option>
-                                                            <option value="urgente">Urgente</option>
-                                                            <option value="mensual"> Mensual</option>
-                                                            <option value="diario">Diario</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </form>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <form>
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label for="search">Buscar</label>
+                                            <input type="text" class="form-control" id="inputSearch" />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputFilter">Filtrar</label>
+                                            <select id="inputFilter" class="form-control">
+                                                <option selected>Elegir</option>
+                                                <option value="urgente">Urgente</option>
+                                                <option value="mensual">Mensual</option>
+                                                <option value="diario">Diario</option>
+                                            </select>
                                         </div>
                                     </div>
+                                </form>
+                            </div>
+                        </div>
 
-                                    <div id="taskList" class="mb-5">
-                                        <!--  <div class="row">
+                        <div id="taskList">
+                            <!-- <div class="row">
                                 <div class="col-10">
                                     <p>titulo tarea</p>
                                 </div>
@@ -141,108 +142,107 @@
                                     <div class="btn btn-danger">Eliminar</div>
                                 </div>
                             </div> -->
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row profileImage">
+                            <img src="images/icono.png" alt="" />
+                            <div class="col-12">
+                                <h3 id="Bienvenido" class="text-center">Bienvenido</h3>
+                                <h3 id="userName" class="text-center text-capitalize"></h3>
 
-                                    </div>
+                                <p class="letra">"No olvides tus tareas ¡Apuntalas!"</p>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6 class="text-secondary ml-1">
+                                    ¿Cómo funciona la prioridad?
+                                </h6>
 
-                                </div>
-                                <div class="col-4">
-                                    <div class="row profileImage">
-                                        <img src="images/icono.png" alt="">
-                                        <div class="col-12">
-                                            <h3 id="name_user" class="text-center">Bienvenido</h3>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left text-danger"
+                                                    type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    Urgente
+                                                </button>
+                                            </h2>
                                         </div>
-                                    </div>
-                                    <div class="row">
 
-                                        <div class="col-12">
-                                            <h6 class="text-secondary">¿Cómo funciona la prioridad?</h6>
-
-                                            <div class="accordion" id="accordionExample">
-                                                <div class="card">
-                                                    <div class="card-header " id="headingOne">
-                                                        <h2 class="mb-0">
-                                                            <button class="btn btn-link btn-block text-left text-danger"
-                                                                type="button" data-toggle="collapse"
-                                                                data-target="#collapseOne" aria-expanded="true"
-                                                                aria-controls="collapseOne">
-                                                                Urgente
-                                                            </button>
-                                                        </h2>
-                                                    </div>
-
-                                                    <div id="collapseOne" class="collapse show"
-                                                        aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                        <div class="card-body">
-                                                            <p>Esta prioridad es roja, para que puedas visualizarla y
-                                                                recordarla rápidamente.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingTwo">
-                                                        <h2 class="mb-0">
-                                                            <button
-                                                                class="btn btn-link btn-block text-left collapsed text-success"
-                                                                type="button" data-toggle="collapse"
-                                                                data-target="#collapseTwo" aria-expanded="false"
-                                                                aria-controls="collapseTwo">
-                                                                Diaria
-                                                            </button>
-                                                        </h2>
-                                                    </div>
-                                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                                        data-parent="#accordionExample">
-                                                        <div class="card-body">
-                                                            <p>Las tareas diarias son las que realizas cada día y puedes
-                                                                visualizarlas con el color azul.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingThree">
-                                                        <h2 class="mb-0">
-                                                            <button class="btn btn-link btn-block text-left collapsed"
-                                                                type="button" data-toggle="collapse"
-                                                                data-target="#collapseThree" aria-expanded="false"
-                                                                aria-controls="collapseThree">
-                                                                Mensual
-                                                            </button>
-                                                        </h2>
-                                                    </div>
-                                                    <div id="collapseThree" class="collapse"
-                                                        aria-labelledby="headingThree" data-parent="#accordionExample">
-                                                        <div class="card-body">
-                                                            <p>Las tareas mensuales son las que esperas desarollar a lo
-                                                                largo del mes o en una fecha en especial. Recuerda que
-                                                                son
-                                                                color verde.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>
+                                                    Esta prioridad es roja, para que puedas visualizarla
+                                                    y recordarla rápidamente.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="btn btn-block btn-secondary mt-4" id="logoutButton">Cerrar sesion</div>
-
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed text-success"
+                                                    type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    Diario
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                            data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>
+                                                    Las tareas diarias son las que realizas cada día y
+                                                    puedes visualizarlas con el color verde.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    Mensual
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                            data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>
+                                                    Las tareas mensuales son las que esperas desarollar
+                                                    a lo largo del mes o en una fecha en especial.
+                                                    Recuerda que son color azul.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-block btn-secondary mt-4" id="logoutButton">
+                            Cerrar sesión
                         </div>
                     </div>
-
+                </div>
+            </div>
 
         </main>
-
     </div>
 
-
-    <footer class="row bg-secondary p-2 fixed-bottom ">
+    <footer class="row bg-secondary p-2 fixed-bottom">
         <div class="container">
             <p class="mt-2 text-light">to do's &copy; 2020</p>
         </div>
     </footer>
-
-
-
 
     <script src="jQuery/jquery.js"></script>
     <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->

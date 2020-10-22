@@ -1,4 +1,3 @@
-
 export let initTasks = new Array(
     {
         idTarea: 0,
