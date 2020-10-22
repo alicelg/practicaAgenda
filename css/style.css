@@ -1,6 +1,7 @@
-/* body {
-    background-color: teal;
-} */
+
+.marginBottomContainer{
+    margin-bottom: 80px;
+}
 
 .row {
     margin-left: 0;
@@ -16,3 +17,55 @@
 #login .iphoneImage img {
     width: 100%;
 }
+
+#login .down img {
+    width: 100%;
+    height: auto;
+}
+
+#todoList .profileImage img {
+    height: 200px;
+    margin: 0 auto;
+}
+
+.logo h2{
+    
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+
+.alertBtn {
+    cursor: pointer;
+}
+
+/* Visualizacion de la prioridad en colores */
+
+.letra{
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.urgente{
+    background-color: rgb(203, 67, 53 );
+
+    border-radius: 3px;
+    color: white;
+}
+
+.diario{
+    background-color: rgb(40, 180, 99);
+    border-radius: 3px;
+    color: white;
+}
+
+.mensual{
+    background-color:rgb(52, 152, 219 );
+    border-radius: 3px;
+    color: white;
+}
+
+
+
