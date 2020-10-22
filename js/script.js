@@ -10,10 +10,13 @@ const priorityInput = document.querySelector('#priority')
 const taskArray = initTasks
 
 
+/* --- Evento visualizar login o espacio de tareas --- */
 
 loginButton.addEventListener('click', login)
 logoutButton.addEventListener('click', logout)
 addTaskButton.addEventListener('click', addTask)
+
+/* --- Función visualizar login o espacio de tareas --- */
 
 function login() {
     document.querySelector('#login').style.display = 'none';
@@ -24,6 +27,8 @@ function logout() {
     document.querySelector('#login').style.display = 'flex';
     document.querySelector('#todoList').style.display = 'none';
 }
+
+/* --- Función Pintar tarea --- */
 
 printTask(taskArray)
 function printTask(pTasks) {
@@ -51,6 +56,7 @@ function printTask(pTasks) {
     })
 }
 
+/* --- Funcion Agregar tarea --- */
 
 function addTask() {
     /* Capturo y valido los datos del formulario */
@@ -71,6 +77,8 @@ function addTask() {
 
 }
 
+/* --- Función Eliminar tarea --- */
+
 function deleteTask(event) {
 
     /* El event es el evento click, el target es el elemento que clicko */
@@ -82,3 +90,41 @@ function deleteTask(event) {
     deleteRow.parentNode.removeChild(deleteRow)
 
 }
+
+/* --- Función Filtrar Prioridad --- */
+
+/* function filterTaskByPriority(pTaskArray, pPriority) {
+    const result = pTaskArray.filter(task => task.prioridad)
+
+    return result;
+} */
+
+
+
+/* --- Evento Filtrar Tarea --- */
+
+let searchByTaskName = document.querySelector('#inputSearch');
+
+searchByTaskName.addEventListener('input', pickUpSearch);
+
+function pickUpSearch(event) {
+    let wordSearch = event.target.value.trim();
+    let filterArrayTask = filterTaskByName(task, wordSearch);
+
+    printTask(filterArrayTask, taskList);
+}
+
+/* --- Función Filtrar Tarea --- */
+
+function filterTaskByName(pTaskArray, pWordSearch) {
+
+    const filterArrayTask = pTaskArray.filter(task => {
+
+        let taskName = task.tarea;
+
+        return taskName.toLowerCase().includes(pWordSearch.toLowerCase());
+    })
+    return filterArrayByName;
+}
+
+
