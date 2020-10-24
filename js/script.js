@@ -16,10 +16,24 @@ const filterPriorityInput = document.querySelector('#filter-priority')
 const buttonHelp = document.querySelectorAll('.alertBtn');
 
 
-const taskArray = initTasks;
+let taskArray;
 let filteredArray = []
 
-let idTarea = 3;
+let idTarea;
+
+/* --- LocalStorage --- */
+
+if (localStorage.getItem('taskArray')) {
+    taskArray = JSON.parse(localStorage.getItem('taskArray'));
+    /* idTarea = taskArray[taskArray.length - 1].idTarea + 1 */
+} else {
+    taskArray = initTasks;
+    /* idTarea = 3 */
+}
+
+idTarea = taskArray[taskArray.length - 1].idTarea + 1
+
+printTask(taskArray)
 
 
 /* --- Evento visualizar login o espacio de tareas --- */
@@ -63,7 +77,6 @@ function logout() {
 
 /* --- Función Pintar tarea --- */
 
-printTask(taskArray)
 function printTask(pTasks) {
     taskListDiv.innerHTML = "";
     for (let task of pTasks) {
@@ -116,6 +129,9 @@ function addTask() {
             alert('Esta tarea se está duplicando')
         }
 
+        /* Guardo el array final en el localStorage */
+        localStorage.setItem('taskArray', JSON.stringify(taskArray))
+
         /* console.log(taskArray) */
     }
 }
@@ -135,6 +151,9 @@ function deleteTask(event) {
     let arrayPositionToDelete = taskArray.findIndex(task => task.idTarea == idTareaBorrar);
 
     taskArray.splice(arrayPositionToDelete, 1);
+
+    /* guardo el array final en el localStorage */
+    localStorage.setItem('taskArray', JSON.stringify(taskArray));
 }
 
 /* --- Función Filtrar Prioridad --- */
@@ -153,7 +172,7 @@ function filterTaskByPriority(pTaskArray, pPriority) {
     }
 
     filteredArray = filterArrayTaskPriority
-    console.log(filteredArray);
+    /* console.log(filteredArray); */
 
     return filterArrayTaskPriority;
 }
