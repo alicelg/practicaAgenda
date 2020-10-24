@@ -121,7 +121,15 @@ function deleteTask(event) {
 /* --- Función Filtrar Prioridad --- */
 
 function filterTaskByPriority(pTaskArray, pPriority) {
-    const filterArrayTaskPriority = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
+    /* console.log(pPriority) */
+    let filterArrayTaskPriority;
+    /* se crea un if para que la opción elegir muestre todas y no se quede sin nada. */
+    if (pPriority == 'todas') {
+        filterArrayTaskPriority = pTaskArray;
+    } else {
+        filterArrayTaskPriority = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
+    }
+
     return filterArrayTaskPriority;
 }
 
@@ -148,7 +156,6 @@ function filterTaskByWord(pTaskArray, pWordSearch) {
 }
 
 /* --- Evento Filtrar Tarea --- */
-
 filterTaskInput.addEventListener('input', event => {
     let wordSearch = event.target.value.trim();
     /*   const result = taskArray.filter(task => task.tarea.toLowerCase().includes(wordSearch.toLowerCase()));
