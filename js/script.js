@@ -2,13 +2,18 @@ import { initTasks } from './todo.js';
 
 const loginButton = document.querySelector('#loginButton');
 const logoutButton = document.querySelector('#logoutButton');
+const userName = document.querySelector('#userName')
+
 const taskListDiv = document.querySelector('#taskList');
+
 const addTaskButton = document.querySelector('#addTaskButton');
 const addTaskInput = document.querySelector('#add-task');
 const addPriorityInput = document.querySelector('#add-priority');
+
+const filterTaskInput = document.querySelector('#filter-task');
 const filterPriorityInput = document.querySelector('#filter-priority')
+
 const buttonHelp = document.querySelectorAll('.alertBtn');
-const userName = document.querySelector('#userName')
 
 
 const taskArray = initTasks;
@@ -116,14 +121,14 @@ function deleteTask(event) {
 /* --- Función Filtrar Prioridad --- */
 
 function filterTaskByPriority(pTaskArray, pPriority) {
-    const result = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
-    return result;
+    const filterArrayTaskPriority = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
+    return filterArrayTaskPriority;
 }
 
 /* --- Evento de filtrar Prioridad --- */
 
 filterPriorityInput.addEventListener('change', event => {
-    console.log(event);
+    /* console.log(event); */
     /* const result = taskArray.filter(task => task.prioridad.toLowerCase() == event.target.value);
     printTask(result); */
 
@@ -138,20 +143,21 @@ filterPriorityInput.addEventListener('change', event => {
 
 function filterTaskByWord(pTaskArray, pWordSearch) {
 
-    const filterArrayTaskName = pTaskArray.filter(task => {
-
-        let taskName = task.tarea;
-
-        return taskName.toLowerCase().includes(pWordSearch.toLowerCase());
-    })
+    const filterArrayTaskName = pTaskArray.filter(task => task.tarea.toLowerCase().includes(pWordSearch.toLowerCase()))
     return filterArrayTaskName;
 }
 
 /* --- Evento Filtrar Tarea --- */
 
-let searchByTask = document.querySelector('#filter-task');
+filterTaskInput.addEventListener('input', event => {
+    let wordSearch = event.target.value.trim();
+    /*   const result = taskArray.filter(task => task.tarea.toLowerCase().includes(wordSearch.toLowerCase()));
+    printTask(result) */
 
-searchByTask.addEventListener('input', pickUpSearch);
+    printTask(filterTaskByWord(taskArray, wordSearch), taskListDiv);
+});
+
+/* filterTaskInput.addEventListener('input', pickUpSearch);
 
 function pickUpSearch(event) {
     let wordSearch = event.target.value.trim();
@@ -159,6 +165,8 @@ function pickUpSearch(event) {
 
     printTask(filterArrayTask, taskListDiv);
 }
+ */
+
 
 
 
