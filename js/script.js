@@ -17,6 +17,7 @@ const buttonHelp = document.querySelectorAll('.alertBtn');
 
 
 const taskArray = initTasks;
+let filteredArray = []
 
 
 /* --- Evento visualizar login o espacio de tareas --- */
@@ -130,6 +131,9 @@ function filterTaskByPriority(pTaskArray, pPriority) {
         filterArrayTaskPriority = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
     }
 
+    filteredArray = filterArrayTaskPriority
+    console.log(filteredArray);
+
     return filterArrayTaskPriority;
 }
 
@@ -140,7 +144,17 @@ filterPriorityInput.addEventListener('change', event => {
     /* const result = taskArray.filter(task => task.prioridad.toLowerCase() == event.target.value);
     printTask(result); */
 
+
+    /*  intento de hacer un casi superfiltro sin boton
+      if (filteredArray.length > 0) {
+          printTask(filterTaskByPriority(filteredArray, event.target.value));
+  
+      } else {
+          printTask(filterTaskByPriority(taskArray, event.target.value));
+      } */
     printTask(filterTaskByPriority(taskArray, event.target.value));
+
+
 })
 
 
@@ -152,6 +166,10 @@ filterPriorityInput.addEventListener('change', event => {
 function filterTaskByWord(pTaskArray, pWordSearch) {
 
     const filterArrayTaskName = pTaskArray.filter(task => task.tarea.toLowerCase().includes(pWordSearch.toLowerCase()))
+
+    filteredArray = filterArrayTaskName
+    console.log(filteredArray);
+
     return filterArrayTaskName;
 }
 
@@ -161,7 +179,16 @@ filterTaskInput.addEventListener('input', event => {
     /*   const result = taskArray.filter(task => task.tarea.toLowerCase().includes(wordSearch.toLowerCase()));
     printTask(result) */
 
+    /*   intento de hacer un casi superfiltro sin boton
+    if (filteredArray.length > 0) {
+         printTask(filterTaskByWord(filteredArray, wordSearch), taskListDiv);
+ 
+     } else {
+         printTask(filterTaskByWord(taskArray, wordSearch), taskListDiv);
+     } */
     printTask(filterTaskByWord(taskArray, wordSearch), taskListDiv);
+
+
 });
 
 /* filterTaskInput.addEventListener('input', pickUpSearch);
