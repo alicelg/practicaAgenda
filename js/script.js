@@ -4,10 +4,12 @@ const loginButton = document.querySelector('#loginButton');
 const logoutButton = document.querySelector('#logoutButton');
 const taskListDiv = document.querySelector('#taskList');
 const addTaskButton = document.querySelector('#addTaskButton');
-const taskInput = document.querySelector('#task');
-const priorityInput = document.querySelector('#priority');
+const addTaskInput = document.querySelector('#add-task');
+const addPriorityInput = document.querySelector('#add-priority');
+const filterPriorityInput = document.querySelector('#filter-priority')
 const buttonHelp = document.querySelectorAll('.alertBtn');
 const userName = document.querySelector('#userName')
+
 
 const taskArray = initTasks;
 
@@ -82,15 +84,15 @@ function printTask(pTasks) {
 
 function addTask() {
     /* Capturo y valido los datos del formulario */
-    console.log(taskInput.value);
-    console.log(priorityInput.value);
-    if (taskInput.value.trim().length == 0 || priorityInput.value == "elige") {
+    console.log(addTaskInput.value);
+    console.log(addPriorityInput.value);
+    if (addTaskInput.value.trim().length == 0 || addPriorityInput.value == "elige") {
         alert('por favor mete todos los datos');
     } else {
         const createTask = {
             idTarea: 0,
-            tarea: taskInput.value,
-            prioridad: priorityInput.value
+            tarea: addTaskInput.value,
+            prioridad: addPriorityInput.value
         }
         taskArray.push(createTask)
         printTask(taskArray)
@@ -113,17 +115,28 @@ function deleteTask(event) {
 
 /* --- Función Filtrar Prioridad --- */
 
-/* function filterTaskByPriority(pTaskArray, pPriority) {
-    const result = pTaskArray.filter(task => task.prioridad)
-
+function filterTaskByPriority(pTaskArray, pPriority) {
+    const result = pTaskArray.filter(task => task.prioridad.toLowerCase() == pPriority);
     return result;
-} */
+}
+
+/* --- Evento de filtrar Prioridad --- */
+
+filterPriorityInput.addEventListener('change', event => {
+    console.log(event);
+    /* const result = taskArray.filter(task => task.prioridad.toLowerCase() == event.target.value);
+    printTask(result); */
+
+    printTask(filterTaskByPriority(taskArray, event.target.value));
+})
+
+
 
 
 
 /* --- Función Filtrar Tarea --- */
 
-function filterTaskByName(pTaskArray, pWordSearch) {
+function filterTaskByWord(pTaskArray, pWordSearch) {
 
     const filterArrayTaskName = pTaskArray.filter(task => {
 
@@ -136,13 +149,13 @@ function filterTaskByName(pTaskArray, pWordSearch) {
 
 /* --- Evento Filtrar Tarea --- */
 
-let searchByTaskName = document.querySelector('#inputSearch');
+let searchByTask = document.querySelector('#filter-task');
 
-searchByTaskName.addEventListener('input', pickUpSearch);
+searchByTask.addEventListener('input', pickUpSearch);
 
 function pickUpSearch(event) {
     let wordSearch = event.target.value.trim();
-    let filterArrayTask = filterTaskByName(task, wordSearch);
+    let filterArrayTask = filterTaskByWord(task, wordSearch);
 
     printTask(filterArrayTask, taskListDiv);
 }

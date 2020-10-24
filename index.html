@@ -14,7 +14,7 @@
 <body>
     <div class="container marginBottomContainer">
         <main>
-            <div id="login" class="vertical-align">
+            <div id="login" class="vertical-align" style="display: none;">
                 <div class="row">
                     <div class="col-md-6 iphoneImage">
                         <img src="images/iphone.webp" alt="" />
@@ -78,7 +78,7 @@
             </div>
 
             <!-- Segunda visualización -->
-            <div id="todoList" style="display: none;">
+            <div id="todoList">
                 <div class="row mt-5">
                     <div class="col-8">
                         <div class="row mb-1">
@@ -90,15 +90,15 @@
                             <form class="w-100">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="task">Tarea</label>
+                                        <label class="input-group-text" for="add-task">Tarea</label>
                                     </div>
-                                    <input type="text" class="form-control" id="task">
+                                    <input type="text" class="form-control" id="add-task">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="priority">Prioridad</label>
+                                        <label class="input-group-text" for="add-priority">Prioridad</label>
                                     </div>
-                                    <select class="custom-select" id="priority">
+                                    <select class="custom-select" id="add-priority">
                                         <option value="elige" selected>Elige</option>
                                         <option value="urgente">Urgente</option>
                                         <option value="diario">Diario</option>
@@ -116,12 +116,12 @@
                                 <form>
                                     <div class="form-row justify-content-center">
                                         <div class="form-group col-md-6">
-                                            <label for="search">Buscar</label>
-                                            <input type="text" class="form-control" id="inputSearch" />
+                                            <label for="filter-task">Buscar</label>
+                                            <input type="text" class="form-control" id="filter-task">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="inputFilter">Filtrar</label>
-                                            <select id="inputFilter" class="form-control">
+                                            <label for="filter-priority">Filtrar</label>
+                                            <select id="filter-priority" class="form-control">
                                                 <option selected>Elegir</option>
                                                 <option value="urgente">Urgente</option>
                                                 <option value="mensual">Mensual</option>
