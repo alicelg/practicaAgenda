@@ -19,6 +19,8 @@ const buttonHelp = document.querySelectorAll('.alertBtn');
 const taskArray = initTasks;
 let filteredArray = []
 
+let idTarea = 3;
+
 
 /* --- Evento visualizar login o espacio de tareas --- */
 
@@ -59,15 +61,15 @@ function logout() {
 } */
 
 
-
 /* --- Función Pintar tarea --- */
 
 printTask(taskArray)
 function printTask(pTasks) {
     taskListDiv.innerHTML = "";
     for (let task of pTasks) {
+        /* añado el id para luego poder borrar del array*/
         taskListDiv.innerHTML += `
-            <div class="row ${task.prioridad} mb-2 ">
+            <div class="row ${task.prioridad} mb-2" data-id="${task.idTarea}">
                 <div class="col-10 d-flex align-items-center">
                     <p class="mb-0">${task.tarea}</p>
                 </div>
@@ -95,13 +97,26 @@ function addTask() {
     if (addTaskInput.value.trim().length == 0 || addPriorityInput.value == "elige") {
         alert('por favor mete todos los datos');
     } else {
+
         const createTask = {
-            idTarea: 0,
+            idTarea: idTarea,
             tarea: addTaskInput.value,
             prioridad: addPriorityInput.value
         }
-        taskArray.push(createTask)
-        printTask(taskArray)
+
+        let existe = taskArray.findIndex(task => {
+            return task.tarea == addTaskInput.value && task.prioridad == addPriorityInput.value;
+        })
+
+        if (existe == -1) {
+            taskArray.push(createTask)
+            printTask(taskArray)
+            idTarea++;
+        } else {
+            alert('Esta tarea se está duplicando')
+        }
+
+        /* console.log(taskArray) */
     }
 }
 
@@ -110,13 +125,16 @@ function addTask() {
 function deleteTask(event) {
 
     /* El event es el evento click, el target es el elemento que clicko */
-    /*  console.log(event.target) */
+    /* console.log(event.target) */
     /* console.log(event.target.parentNode.parentNode) */
-
     const deleteRow = event.target.parentNode.parentNode
-
     deleteRow.parentNode.removeChild(deleteRow)
 
+    let idTareaBorrar = deleteRow.dataset.id;
+
+    let arrayPositionToDelete = taskArray.findIndex(task => task.idTarea == idTareaBorrar);
+
+    taskArray.splice(arrayPositionToDelete, 1);
 }
 
 /* --- Función Filtrar Prioridad --- */
@@ -156,12 +174,7 @@ filterPriorityInput.addEventListener('change', event => {
           printTask(filterTaskByPriority(taskArray, event.target.value));
       } */
     printTask(filterTaskByPriority(taskArray, event.target.value));
-
-
 })
-
-
-
 
 
 /* --- Función Filtrar Tarea --- */
@@ -179,6 +192,7 @@ function filterTaskByWord(pTaskArray, pWordSearch) {
 }
 
 /* --- Evento Filtrar Tarea --- */
+
 filterTaskInput.addEventListener('input', event => {
     let wordSearch = event.target.value.trim();
     /*   const result = taskArray.filter(task => task.tarea.toLowerCase().includes(wordSearch.toLowerCase()));
@@ -192,19 +206,8 @@ filterTaskInput.addEventListener('input', event => {
          printTask(filterTaskByWord(taskArray, wordSearch), taskListDiv);
      } */
     printTask(filterTaskByWord(taskArray, wordSearch), taskListDiv);
-
-
 });
 
-/* filterTaskInput.addEventListener('input', pickUpSearch);
-
-function pickUpSearch(event) {
-    let wordSearch = event.target.value.trim();
-    let filterArrayTask = filterTaskByWord(task, wordSearch);
-
-    printTask(filterArrayTask, taskListDiv);
-}
- */
 
 
 
