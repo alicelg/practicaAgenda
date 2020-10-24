@@ -23,7 +23,7 @@ let idTarea;
 
 /* --- LocalStorage --- */
 
-if (localStorage.getItem('taskArray')) {
+if (JSON.parse(localStorage.getItem('taskArray'))) {
     taskArray = JSON.parse(localStorage.getItem('taskArray'));
     /* idTarea = taskArray[taskArray.length - 1].idTarea + 1 */
 } else {
@@ -31,7 +31,10 @@ if (localStorage.getItem('taskArray')) {
     /* idTarea = 3 */
 }
 
-idTarea = taskArray[taskArray.length - 1].idTarea + 1
+/* se hace para poder eliminar todas y que no se produzca un error  */
+idTarea = taskArray[taskArray.length - 1] ? taskArray[taskArray.length - 1].idTarea + 1 : 0
+
+
 
 printTask(taskArray)
 
@@ -52,7 +55,6 @@ function login() {
 
     /* valido los datos capturados */
     if ((name.toLowerCase() == 'juanan' && password == '123') || (name.toLowerCase() == 'alice' && password == '456')) {
-        task
         document.querySelector('#login').style.display = 'none';
         document.querySelector('#todoList').style.display = 'block';
         userName.innerText = name.toLowerCase();
