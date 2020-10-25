@@ -4,4 +4,5 @@
 
 #changeColor, #logoutButton, #addTaskButton, #loginButton{
     background: blue;
+    color: white;
 }
