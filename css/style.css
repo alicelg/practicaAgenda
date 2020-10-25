@@ -47,6 +47,10 @@
     text-align: center;
 }
 
+.helpme {
+    cursor: pointer;
+}
+
 
 .urgente{
     background-color: rgb(203, 67, 53 );

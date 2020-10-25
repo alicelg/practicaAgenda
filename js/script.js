@@ -6,7 +6,9 @@ const taskListDiv = document.querySelector('#taskList');
 const addTaskButton = document.querySelector('#addTaskButton');
 const taskInput = document.querySelector('#task');
 const priorityInput = document.querySelector('#priority');
-const buttonHelp = document.querySelectorAll('.alertBtn');
+const buttonSignUp = document.querySelector('#alertBtn');
+const buttonRememberPassword = document.querySelector('#alertBtnPassword')
+const buttonHelp = document.querySelector('.helpme')
 const userName = document.querySelector('#userName')
 
 const taskArray = initTasks;
@@ -42,13 +44,26 @@ function logout() {
     document.querySelector('#todoList').style.display = 'none';
 }
 
-/* --- Evento botoneshelp en login--- */
-/* buttonHelp.addEventListener('click', alert("No tines cuentas o no recuerdas tu cuenta. No te preocuopes, escribe Juanan y contraseña 123")) */
+/* --- Evento boton Registrate en login--- */
+buttonSignUp.addEventListener('click', showAlert);
+/* --- Función boton Registrate  en login --- */
+function showAlert() {
+    alert("En estos momentos no te puedes registrar, intenta más tarde.");
+}
 
-/* --- Función botoneshelp en login --- */
-/* function mostrarAlerta() {
-    alert("No tines cuentas o no recuerdas tu cuenta. No te preocuopes, escribe Juanan y contraseña 123");
-} */
+/* --- Evento boton Olvide Contraseña en login--- */
+buttonRememberPassword.addEventListener('click', showPassword);
+/* --- Función boton Olvide Contraseña en login --- */
+function showPassword() {
+    alert("Solo contamos con 2 usuarios así que intenta con: \n (Juanan - 123) (Alice - 456)")
+}
+
+/* --- Evento boton Necesitas Ayuda en login--- */
+buttonHelp.addEventListener('click', showHelpMe);
+/* --- Función boton Necesitas Ayuda  en login --- */
+function showHelpMe() {
+    alert("Todos necesitamos ayuda para aprender JS")
+}
 
 
 

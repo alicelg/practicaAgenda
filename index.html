@@ -46,16 +46,16 @@
                         </form>
 
                         <div class="row">
-                            <div class="col-12 alertBtn">
-                                <p class="text-primary text-center mt-2">
+                            <div class="col-12">
+                                <p class="text-primary text-center mt-2" id="alertBtnPassword">
                                     ¿Olvidaste tu contraseña?
                                 </p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 text-center mb-4 border alertBtn">
+                            <div class="col-12 text-center mb-4 border">
                                 ¿No tienes cuenta?
-                                <span class="text-primary"> Regístrate</span>
+                                <span class="text-primary" id="alertBtn"> Regístrate</span>
                             </div>
                         </div>
 
@@ -238,9 +238,13 @@
         </main>
     </div>
 
-    <footer class="row bg-secondary p-2 fixed-bottom">
+    <footer class="row bg-secondary p-2 fixed-bottom ">
         <div class="container">
-            <p class="mt-2 text-light">to do's &copy; 2020</p>
+            <div class="d-flex justify-content-between">
+                <p class="mt-2">to do's &copy; 2020</p>
+                <p class="mt-2 helpme">¿Necesitas ayuda?</p>
+            </div>
+
         </div>
     </footer>
 
