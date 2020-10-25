@@ -1,0 +1,7 @@
+.logo h2, #bienvenido , #userName{
+    color: black;
+}
+
+#changeColor, #logoutButton, #addTaskButton, #loginButton {
+    background: black;
+}

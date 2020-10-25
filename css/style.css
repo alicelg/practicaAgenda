@@ -42,8 +42,8 @@
 /* Visualizacion de la prioridad en colores */
 
 .letra{
-    font-family: 'Great Vibes', cursive;
-    font-size: 20px;
+    
+    font-size: 15px;
     text-align: center;
 }
 
@@ -68,4 +68,34 @@
 }
 
 
+/* cambios de tema  */
+
+#selector-theme{
+    top: 40%;
+    width: 50px;
+    height: 100px;
+}
+
+#to-black, #to-pink, #to-blue {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#to-black {
+    background: black;
+}
+
+#to-blue {
+    background: blue;
+}
+
+#to-pink {
+    background: rgb(250, 66, 96);
+}
 

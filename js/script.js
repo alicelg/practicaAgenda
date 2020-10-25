@@ -230,6 +230,17 @@ filterTaskInput.addEventListener('input', event => {
 });
 
 
+/* --- Selector de temas, cambios de colores --- */
+let theme = $('#theme')
+$('#to-black').click(function () {
+    theme.attr("href", "css/black.css")
+});
+$('#to-blue').click(function () {
+    theme.attr("href", "css/blue.css")
+});
+$('#to-pink').click(function () {
+    theme.attr("href", "css/pink.css")
+})
 
 
 

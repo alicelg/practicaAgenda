@@ -1,0 +1,10 @@
+.logo h2, #bienvenido , #userName{
+    color: rgb(250, 66, 96);
+}
+
+#changeColor, #logoutButton, #addTaskButton, #loginButton{
+    background:rgb(250, 66, 96);
+}
+
+
+
