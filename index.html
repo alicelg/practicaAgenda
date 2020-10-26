@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <div class="container marginBottomContainer">
+    <div class="container-fluid marginBottomContainer">
         <main>
             <div id="login" class="vertical-align">
                 <div class="row">
 
-                    <div class="col-md-6 position-relative">
+                    <div class="col-md-6 position-relative d-none d-md-block ">
                         <img class="w-100 position-absolute iphoneImage" src="images/iphone.webp" />
                         <div id="carouselExampleSlidesOnly" class="carousel slide iphoneSlider" data-ride="carousel">
                             <div class="carousel-inner">
@@ -172,98 +172,98 @@
                             </div> -->
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="row profileImage">
-                        <img src="images/icono.png" alt="" />
-                        <div class="col-12">
-                            <h3 id="bienvenido" class="text-center">Bienvenido</h3>
-                            <h3 id="userName" class="text-center text-capitalize"></h3>
+                <div class="col-md-4 col-sm-12 d-none d-sm-block"">
+                    <div class=" row profileImage">
+                    <img src="images/icono.png" alt="" />
+                    <div class="col-12">
+                        <h3 id="bienvenido" class="text-center">Bienvenido</h3>
+                        <h3 id="userName" class="text-center text-capitalize"></h3>
 
-                            <p class="letra">"No olvides tus tareas ¡Apuntalas!"</p>
-                            <hr />
-                        </div>
+                        <p class="letra">"No olvides tus tareas ¡Apuntalas!"</p>
+                        <hr />
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="text-secondary ml-1">
-                                ¿Cómo funciona la prioridad?
-                            </h6>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-none d-md-block">
+                        <h6 class="text-secondary ml-1">
+                            ¿Cómo funciona la prioridad?
+                        </h6>
 
-                            <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left text-danger" type="button"
-                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
-                                                Urgente
-                                            </button>
-                                        </h2>
-                                    </div>
+                        <div class="accordion " id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left text-danger" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Urgente
+                                        </button>
+                                    </h2>
+                                </div>
 
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <p>
-                                                Esta prioridad es roja, para que puedas visualizarla
-                                                y recordarla rápidamente.
-                                            </p>
-                                        </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Esta prioridad es roja, para que puedas visualizarla
+                                            y recordarla rápidamente.
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left collapsed text-success"
-                                                type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo">
-                                                Diario
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <p>
-                                                Las tareas diarias son las que realizas cada día y
-                                                puedes visualizarlas con el color verde.
-                                            </p>
-                                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed text-success"
+                                            type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Diario
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Las tareas diarias son las que realizas cada día y
+                                            puedes visualizarlas con el color verde.
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                                data-toggle="collapse" data-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree">
-                                                Mensual
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <p>
-                                                Las tareas mensuales son las que esperas desarollar
-                                                a lo largo del mes o en una fecha en especial.
-                                                Recuerda que son color azul.
-                                            </p>
-                                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Mensual
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Las tareas mensuales son las que esperas desarollar
+                                            a lo largo del mes o en una fecha en especial.
+                                            Recuerda que son color azul.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="btn btn-block btn-secondary mt-4 border-0" id="logoutButton">
-                        Cerrar sesión
-                    </div>
+                <div class="btn btn-block btn-secondary mt-4 border-0" id="logoutButton">
+                    Cerrar sesión
                 </div>
             </div>
         </div>
+    </div>
 
-        </main>
+    </main>
     </div>
 
     <footer class="row p-2 fixed-bottom" id="changeColor">
