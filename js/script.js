@@ -150,6 +150,9 @@ function addTask() {
         localStorage.setItem('taskArray', JSON.stringify(taskArray))
 
         /* console.log(taskArray) */
+
+        addTaskInput.value = ""; /* esto se hace para que se vacie el espacio despues de añadir la tarea */
+        addPriorityInput.value = "elige";
     }
 }
 
